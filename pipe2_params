@@ -1,7 +1,7 @@
 pipeline{
   agent any
   
-  parameters{paramType="boolean" ,name = 'TakeParam' description = "Take any boolean parameters", defaultValue=false}
+  parameters{paramType="boolean" ,name = 'TakeParam', description = "Take any boolean parameters", defaultValue=false}
   
   stages{
     stage('Hello World')
