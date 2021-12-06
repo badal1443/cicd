@@ -1,0 +1,22 @@
+pipeline{
+  agent any
+  
+  parameters{paramType="boolean" ,name = 'TakeParam' description = "Take any boolean parameters", defaultValue=false}
+  
+  stages{
+    stage('Hello World')
+    {
+      steps{
+        echo 'Hello world'
+      }
+    }
+    
+    stage('exec param'){
+      when ( return params.TakeParam)
+      
+      steps{
+        echo "Parameer is selected manually"
+      }
+    }
+  }
+}
